@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  margin: 1rem;
+}
+
+.title {
+  margin: 2rem;
+  padding: 1rem;
+  color: #ffffff;
+  border-radius: 1rem;
+
+  /* Using tool colorgradient.io for background color */
+  background: #5b1c8a;
+  background: radial-gradient(circle, #5b1c8a 42%, #eeaeca 100%);
+}
+
+.date {
+  margin: 2rem;
+  padding: 1rem;
+}
+
+#dob {
+  border: 3px solid black;
+  margin-top: 0.7rem;
+  outline: none;
+  transition-duration: 0.6s;
+  border-radius: 2rem;
+  padding: 16px 32px;
+}
+
+#dob:hover {
+  border-color: #5b1c8a;
+}
+
+#dob:focus {
+  border-color: #ff0000;
+}
+
+button {
+  margin-top: 1rem;
+  background: transparent;
+  padding: 12px 24px;
+  border: 2px solid;
+  margin-left: 0.5rem;
+  transition-duration: 0.4s;
+  border-radius: 1rem;
+}
+
+button:hover {
+  border: 2px solid;
+  background: #5b1c8a;
+  color: #ffffff;
+}
+
+#output {
+  display: inline;
+  /* background-color: black; */
+  font-size: larger;
+  margin: auto;
+  padding: 1rem;
+}
