@@ -44,7 +44,7 @@ button {
   background: transparent;
   padding: 12px 24px;
   border: 2px solid;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
   transition-duration: 0.4s;
   border-radius: 1rem;
 }
@@ -53,4 +53,12 @@ button:hover {
   border: 2px solid;
   background: #5b1c8a;
   color: #ffffff;
+}
+
+#output {
+  display: inline-block;
+  /* background-color: black; */
+  font-size: larger;
+  margin: 1rem;
+  padding: 1rem;
 }
