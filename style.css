@@ -56,9 +56,9 @@ button:hover {
 }
 
 #output {
-  display: inline-block;
+  display: inline;
   /* background-color: black; */
   font-size: larger;
-  margin: 1rem;
+  margin: auto;
   padding: 1rem;
 }

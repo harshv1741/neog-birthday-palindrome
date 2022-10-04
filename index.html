@@ -22,10 +22,27 @@
           <br />
           <button type="submit" id="submit">Check</button>
           <button type="reset" id="reset">Reset</button>
+          <br />
+          <br />
+          <p id="output"></p>
         </h2>
       </div>
-      <div id="output"></div>
     </main>
-    <script src="main.js"></script>
+    <footer>
+      <!-- Audio Effect Section -->
+      <audio id="infoSE">
+        <source src="sound/vintage-info-message.mp3" type="audio/wav" />
+      </audio>
+      <audio id="failSE">
+        <source src="sound/fail-trumpet.mp3" type="audio/mp3" />
+      </audio>
+      <audio id="successSE">
+        <source src="sound/tada.mp3" type="audio/mp3" />
+      </audio>
+      <audio id="resetSE">
+        <source src="sound/reset.mp3" type="audio/mp3" />
+      </audio>
+    </footer>
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
