@@ -1,4 +1,4 @@
-# Is your birthday a pallindrome?
+# Is your birthday a palindrome?
 
   This repository is connected to my site **Palindrome Birthday Checker.**
   
