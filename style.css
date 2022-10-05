@@ -62,3 +62,51 @@ button:hover {
   margin: auto;
   padding: 1rem;
 }
+
+/* Footer (START) */
+
+/* Custom footer style */
+footer {
+  margin: 5rem 1rem 1rem 1rem;
+  color: white;
+}
+
+/* To hold all items in the footer tag in one place */
+.footer-container {
+  text-decoration: none;
+  padding: 1rem 1rem 1rem 1rem;
+  width: auto;
+  height: auto;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: #000000;
+}
+
+/* Heading of the footer tag */
+.footer-head {
+  text-align: center;
+}
+
+/* Content of the footer tag */
+.footer-content {
+  padding-bottom: 1rem;
+  display: block;
+  align-items: justify;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* website icons for the footer */
+.footer-icon {
+  display: inline;
+  align-items: justify;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+#page-end {
+  padding-top: 6rem;
+}
+
+/* Footer (END) */
