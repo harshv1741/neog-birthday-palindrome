@@ -57,7 +57,9 @@ check.addEventListener("click", () => {
       date: Number(dd),
     };
 
-    console.log(typeof date.month);
+    console.log("Date: " + date.date);
+    console.log("Month " + date.month);
+    console.log("Year " + date.year);
   } else {
     showMsg("Please! select your date", "info");
   }
