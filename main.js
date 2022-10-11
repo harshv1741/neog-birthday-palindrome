@@ -39,6 +39,26 @@ const showMsg = (text, sound_selector) => {
   }
 };
 
+const stringDate = (date) => {
+  var dateInString = { year: "", month: "", date: "" };
+
+  if (date.date < 10) {
+    dateInString.date = "0" + date.date;
+  } else {
+    dateInString.date = date.date.toString();
+  }
+
+  if (date.month < 10) {
+    dateInString.date = "0" + date.month;
+  } else {
+    dateInString.month = date.month.toString();
+  }
+
+  dateInString.year = date.year.toString();
+
+  return dateInString;
+};
+
 check.addEventListener("click", () => {
   var dateString = dob.value;
   if (dateString) {
@@ -57,9 +77,14 @@ check.addEventListener("click", () => {
       date: Number(dd),
     };
 
-    console.log("Date: " + date.date);
-    console.log("Month " + date.month);
-    console.log("Year " + date.year);
+    console.log("Date: " + date.date + " Type: " + typeof date.date);
+    console.log("Month " + date.month + " Type: " + typeof date.month);
+    console.log("Year " + date.year + " Type: " + typeof date.year);
+
+    var strDate = stringDate(date);
+    console.log("Date: " + strDate.date + " Type: " + typeof strDate.date);
+    console.log("Month " + strDate.month + " Type: " + typeof strDate.month);
+    console.log("Year " + strDate.year + " Type: " + typeof strDate.year);
   } else {
     showMsg("Please! select your date", "info");
   }
