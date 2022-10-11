@@ -39,6 +39,44 @@ const showMsg = (text, sound_selector) => {
   }
 };
 
+const checkDateFormat = (strDate) => {
+  const dateFormatList = (strDate) => {
+    // full format
+    var ddmmyyyy = strDate.date + strDate.month + strDate.year;
+    console.log("ddmmyyyy: " + ddmmyyyy);
+    var mmddyyyy = strDate.month + strDate.date + strDate.year;
+    console.log("mmddyyyy: " + mmddyyyy);
+    var yyyymmdd = strDate.year + strDate.month + strDate.date;
+    console.log("yyyy: " + yyyymmdd);
+
+    // half format
+    var ddmmyy = strDate.date + strDate.month + strDate.year.slice(-2);
+    console.log("ddmmyyyy: " + ddmmyy);
+    var mmddyy = strDate.month + strDate.date + strDate.year.slice(-2);
+    console.log("ddmmyyyy: " + mmddyy);
+    var yyddmm = strDate.year.slice(-2) + strDate.date + strDate.month;
+    console.log("ddmmyyyy: " + yyddmm);
+
+    return [ddmmyyyy, mmddyyyy, yyyymmdd, ddmmyy, mmddyy, yyddmm];
+  };
+
+  const stringPalindromeChecker = (str) => {
+    var reverseDate = str.split("").reverse("").join("");
+    return str === reverseDate;
+  };
+
+  var dFL = dateFormatList(strDate);
+  var palindromeDateList = [];
+
+  for (let i = 0; i < dFL.length; i++) {
+    var result = stringPalindromeChecker(dFL[i]);
+    palindromeDateList.push(result);
+  }
+
+  return palindromeDateList;
+};
+
+// Converting date to string
 const stringDate = (date) => {
   var dateInString = { year: "", month: "", date: "" };
 
@@ -77,14 +115,17 @@ check.addEventListener("click", () => {
       date: Number(dd),
     };
 
-    console.log("Date: " + date.date + " Type: " + typeof date.date);
-    console.log("Month " + date.month + " Type: " + typeof date.month);
-    console.log("Year " + date.year + " Type: " + typeof date.year);
+    // console.log("Date: " + date.date + " Type: " + typeof date.date);
+    // console.log("Month " + date.month + " Type: " + typeof date.month);
+    // console.log("Year " + date.year + " Type: " + typeof date.year);
 
     var strDate = stringDate(date);
-    console.log("Date: " + strDate.date + " Type: " + typeof strDate.date);
-    console.log("Month " + strDate.month + " Type: " + typeof strDate.month);
-    console.log("Year " + strDate.year + " Type: " + typeof strDate.year);
+    // console.log("Date: " + strDate.date + " Type: " + typeof strDate.date);
+    // console.log("Month " + strDate.month + " Type: " + typeof strDate.month);
+    // console.log("Year " + strDate.year + " Type: " + typeof strDate.year);
+
+    var list = checkDateFormat(strDate);
+    console.log("List: " + list + " Type: " + typeof list);
   } else {
     showMsg("Please! select your date", "info");
   }
