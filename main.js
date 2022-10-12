@@ -7,7 +7,6 @@ const showMsg = (text, sound_selector) => {
   const infoSE = document.querySelector("#infoSE");
   const failSE = document.querySelector("#failSE");
   const successSE = document.querySelector("#successSE");
-  const resetSE = document.querySelector("#resetSE");
 
   switch (sound_selector) {
     case "info":
@@ -30,6 +29,7 @@ const showMsg = (text, sound_selector) => {
 
     case "reset":
       msg.innerText = "";
+      dob.value = "";
       resetSE.play();
       break;
 
@@ -137,7 +137,7 @@ getNextDate = (date) => {
     month: month,
     year: year,
   };
-}
+};
 
 // Returns next palindrome date
 getNextPalindromeDate = (date) => {
@@ -260,5 +260,6 @@ check.addEventListener("click", () => {
 
 // Reset button function
 reset.addEventListener("click", () => {
+  const resetSE = document.querySelector("#resetSE");
   showMsg("", "reset");
 });
