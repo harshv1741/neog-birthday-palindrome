@@ -7,6 +7,7 @@ const showMsg = (text, sound_selector) => {
   const infoSE = document.querySelector("#infoSE");
   const failSE = document.querySelector("#failSE");
   const successSE = document.querySelector("#successSE");
+  const resetSE = document.querySelector("#resetSE");
 
   switch (sound_selector) {
     case "info":
@@ -260,6 +261,5 @@ check.addEventListener("click", () => {
 
 // Reset button function
 reset.addEventListener("click", () => {
-  const resetSE = document.querySelector("#resetSE");
   showMsg("", "reset");
 });
